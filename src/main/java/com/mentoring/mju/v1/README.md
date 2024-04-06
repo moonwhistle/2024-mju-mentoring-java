@@ -14,11 +14,12 @@
 - random 값이 4 이상이면 전진(moveCount ++)함수 선언
 
 - [Cars]
-
+- List<Car> getter 선언
 
 - [OutputView]
 - 첫 번째 안내문구 출력.
 - 두 번째 안내문구 출력.
+- 실행 결과 문구 출력
 
 
 ### 이론

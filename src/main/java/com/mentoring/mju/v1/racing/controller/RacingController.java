@@ -20,9 +20,10 @@ public class RacingController {
        inputView.inputCarNames();
        outputView.secondGuide();
        inputView.inputChane();
+       outputView.start();
    }
 
-   public void makeCars() //여러 자동차 묶음 생성
+   public List<Car> makeCars() //여러 자동차 묶음 생성
    {
        List<Car> carList = new ArrayList<>();
        for(String carName: inputView.getCarNames())
@@ -31,7 +32,19 @@ public class RacingController {
            carList.add(car);
        }
        Cars cars = new Cars(carList);
+       return cars.getCars();
+   }
 
+   public void realGame()
+   {
+       RacingController racingController = new RacingController();
+       for(int i=0;i< inputView.getChance();i++)
+       {
+            for(Car car : racingController.makeCars())
+            {
+                car.moveCar(car);
+            }
+       }
    }
 
 
