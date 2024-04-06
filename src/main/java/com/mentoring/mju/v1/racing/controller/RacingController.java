@@ -49,7 +49,7 @@ public class RacingController {
        }
    }
 
-   public void changeCountToChar() //차량의 카운트를 '-'로 바꿔주는 함수 선언
+   public void changeCountToChar(Car car) //자동차의 카운트를 '-'로 바꿔주는 함수 선언
    {
 
    }

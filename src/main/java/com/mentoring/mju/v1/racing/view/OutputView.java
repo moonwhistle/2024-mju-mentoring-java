@@ -1,8 +1,7 @@
 package com.mentoring.mju.v1.racing.view;
 
 
-
-
+import com.mentoring.mju.v1.racing.domain.Car;
 
 public class OutputView {
 
@@ -21,6 +20,11 @@ public class OutputView {
     public void start() //실행 결과 메서드
     {
         System.out.println("실행 결과");
+    }
+
+    public String showName(Car car)
+    {
+        return car.getCarName()+": ";
     }
 
 }
