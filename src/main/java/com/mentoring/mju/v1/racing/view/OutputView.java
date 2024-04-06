@@ -22,9 +22,17 @@ public class OutputView {
         System.out.println("실행 결과");
     }
 
-    public String showName(Car car)
+    public void showName(Car car)
     {
-        return car.getCarName()+": ";
+        System.out.print(car.getCarName()+": ");
+    }
+
+    public void changeCountToChar(Car car) //자동차의 카운트를 '-'로 바꿔주는 함수 선언
+    {
+        int count = car.getMoveCount();
+        String bar = "-".repeat(count);
+        System.out.println(bar);
+        System.out.println();
     }
 
 }

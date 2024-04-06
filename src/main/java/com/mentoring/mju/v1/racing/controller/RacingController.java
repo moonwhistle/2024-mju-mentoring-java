@@ -14,7 +14,7 @@ public class RacingController {
 
 
     // 조립
-   public void complete()
+   public void race()
    {
        outputView.firstGuide();
        inputView.inputCarNames();
@@ -40,19 +40,15 @@ public class RacingController {
 
    public void realmoveCar(List<Car> cars) //차들이 움직이는 메서드 구현(+count)
    {
-       for(int i=0;i< inputView.getChance();i++)
+       for(Car car : cars)
        {
-            for(Car car : cars)
-            {
-                car.moveCar(car);
-            }
+           car.moveCar(car);
+           outputView.showName(car);
+
        }
    }
 
-   public void changeCountToChar(Car car) //자동차의 카운트를 '-'로 바꿔주는 함수 선언
-   {
 
-   }
 
 
 
