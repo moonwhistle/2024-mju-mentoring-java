@@ -11,7 +11,7 @@
 - 랜덤 값 받는 변수 선언(Math.random()함수는 double형이므로 (int)형변환 필요)
 - carName을 받는 변수 선언
 - carName과 Random 값을 받는 생성자 선언 
-- random 값이 4 이상이면 전진
+- random 값이 4 이상이면 전진(moveCount ++)
 
 - [Cars]
 
