@@ -14,13 +14,16 @@ public class RacingController {
 
 
     // 조립
-   public void guide()
+   public void complete()
    {
        outputView.firstGuide();
        inputView.inputCarNames();
        outputView.secondGuide();
        inputView.inputChane();
        outputView.start();
+
+       List<Car> cars = makeCars();
+       realGame(cars);
    }
 
    public List<Car> makeCars() //여러 자동차 묶음 생성
@@ -35,17 +38,18 @@ public class RacingController {
        return cars.getCars();
    }
 
-   public void realGame()
+   public void realGame(List<Car> cars) //차들이 움직이는 메서드 구현(+count)
    {
-       RacingController racingController = new RacingController();
        for(int i=0;i< inputView.getChance();i++)
        {
-            for(Car car : racingController.makeCars())
+            for(Car car : cars)
             {
                 car.moveCar(car);
             }
        }
    }
+
+
 
 
 
