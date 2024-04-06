@@ -13,6 +13,7 @@ public class Application {
 
         RacingController racingController = new RacingController();
         racingController.guide();
+        racingController.makeCars();
 
     }
 
