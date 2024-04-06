@@ -17,24 +17,4 @@ public class Cars {
         return cars;
     }
 
-    public List<Car> selectWinner()
-    {
-        int count =0;
-        for(Car car : cars)
-        {
-            if(car.getMoveCount()>=count)
-            {
-                count = car.getMoveCount();
-            }
-        }
-        List<Car> winCar = new ArrayList<>();
-        for(Car car : cars)
-        {
-            if(count == car.getMoveCount())
-            {
-                winCar.add(car);
-            }
-        }
-        return winCar;
-    }
 }

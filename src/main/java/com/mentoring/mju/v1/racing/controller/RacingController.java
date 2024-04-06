@@ -24,6 +24,8 @@ public class RacingController {
 
        List<Car> cars = makeCars();
        realmoveCar(cars);
+       List<Car> Winner = selectWinner(cars);
+       outputView.printWinner(Winner);
    }
 
    public List<Car> makeCars() //여러 자동차 묶음 생성
@@ -52,16 +54,26 @@ public class RacingController {
    }
 
 
-
-
-
-
-
-
-
-
-
-
+    public List<Car> selectWinner(List<Car> cars) //승자 뽑는 메서드
+    {
+        int count =0;
+        for(Car car : cars)
+        {
+            if(car.getMoveCount()>=count)
+            {
+                count = car.getMoveCount();
+            }
+        }
+        List<Car> winCar = new ArrayList<>();
+        for(Car car : cars)
+        {
+            if(count == car.getMoveCount())
+            {
+                winCar.add(car);
+            }
+        }
+        return winCar;
+    }
 
 
 }

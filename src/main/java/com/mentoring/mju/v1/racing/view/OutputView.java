@@ -2,10 +2,16 @@ package com.mentoring.mju.v1.racing.view;
 
 
 import com.mentoring.mju.v1.racing.domain.Car;
+import com.mentoring.mju.v1.racing.domain.Cars;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class OutputView {
 
-    InputView inputView;
+    Cars cars;
 
     // TODO : 화면 출력 구현
     public void firstGuide() //첫 번째 안내 메세지
@@ -34,5 +40,17 @@ public class OutputView {
         System.out.println(bar);
 
     }
+    public void printWinner(List<Car> cars)
+    {
+        System.out.print("최종 우승자: ");
+        List<String> winnerName = new ArrayList<>();
+        for(Car car : cars)
+        {
+           winnerName.add(car.getCarName());
+        }
+        String Winner = winnerName.stream().map(Objects::toString).collect(Collectors.joining(","));
+        System.out.println(Winner);
+    }
+
 
 }
