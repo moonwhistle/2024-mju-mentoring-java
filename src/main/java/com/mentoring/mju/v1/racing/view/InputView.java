@@ -1,6 +1,5 @@
 package com.mentoring.mju.v1.racing.view;
 
-import java.security.PublicKey;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;

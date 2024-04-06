@@ -1,10 +1,5 @@
 package com.mentoring.mju.v1.racing.domain;
 
-
-import com.mentoring.mju.v1.racing.view.InputView;
-
-import java.util.List;
-
 public class Car {
     private String carName; //차 이름 받는 변수 선언
     private int moveCount;
