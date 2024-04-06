@@ -32,7 +32,7 @@ public class OutputView {
         int count = car.getMoveCount();
         String bar = "-".repeat(count);
         System.out.println(bar);
-        System.out.println();
+
     }
 
 }

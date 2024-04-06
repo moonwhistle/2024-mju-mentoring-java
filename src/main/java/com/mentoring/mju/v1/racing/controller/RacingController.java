@@ -39,12 +39,15 @@ public class RacingController {
    }
 
    public void realmoveCar(List<Car> cars) //차들이 움직이는 메서드 구현(+count)
-   {
-       for(Car car : cars)
+   {   for(int i=0; i< inputView.getChance();i++)
        {
-           car.moveCar(car);
-           outputView.showName(car);
-
+           for(Car car : cars)
+           {
+               car.moveCar(car);
+               outputView.showName(car);
+               outputView.changeCountToChar(car);
+           }
+           System.out.println();
        }
    }
 

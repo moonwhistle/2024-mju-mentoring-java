@@ -8,7 +8,7 @@ public class Test {
     public static void main(String[] args) {
         Car car = new Car(carData[1]);
         RacingController racingController = new RacingController();
-        racingController.complete();
+        racingController.race();
     }
 
 
