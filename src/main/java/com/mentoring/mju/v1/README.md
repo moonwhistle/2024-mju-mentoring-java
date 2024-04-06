@@ -5,7 +5,6 @@
 - inputCarNames() 메서드 선언
 - 5자 이하로 입력 받을 수 있게 함.
 - ','로 객체 구분.
-- for 문으로 3번 입력 받고 예외상황시 예외처리
 - Chance(몇 번 실행할지) 값 받는 메서드 선언
 
 - [Car]
@@ -13,6 +12,9 @@
 - carName을 받는 변수 선언
 - carName과 Random 값을 받는 생성자 선언 
 - random 값이 4 이상이면 전진
+
+- [Cars]
+
 
 - [OutputView]
 - 첫 번째 안내문구 출력.
