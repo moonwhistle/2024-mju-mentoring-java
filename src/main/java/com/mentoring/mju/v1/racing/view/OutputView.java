@@ -6,6 +6,7 @@ package com.mentoring.mju.v1.racing.view;
 
 public class OutputView {
 
+    InputView inputView;
 
     // TODO : 화면 출력 구현
     public void firstGuide() //첫 번째 안내 메세지

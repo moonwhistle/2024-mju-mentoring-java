@@ -23,6 +23,16 @@ public class Car {
         }
     }
 
+    public String getCarName() //carName getter
+    {
+        return carName;
+    }
+
+    public int getMoveCount() //moveCount getter
+    {
+        return moveCount;
+    }
+
 
 
 
