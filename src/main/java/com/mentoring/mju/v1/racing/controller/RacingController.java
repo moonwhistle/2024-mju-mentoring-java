@@ -12,7 +12,7 @@ public class RacingController {
        outputView.firstGuide();
        InputView inputView = new InputView();
        inputView.inputCarNames();
-       System.out.println(inputView.getCarNames());
        outputView.secondGuide();
+       inputView.inputChane();
    }
 }

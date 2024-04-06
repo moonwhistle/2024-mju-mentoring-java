@@ -37,5 +37,10 @@ public class InputView {
         Chance = input.nextInt();
     }
 
+    public int getChance() //Chance getter
+    {
+        return Chance;
+    }
+
 
 }
