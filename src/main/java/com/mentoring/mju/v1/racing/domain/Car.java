@@ -1,19 +1,23 @@
 package com.mentoring.mju.v1.racing.domain;
 
-import java.util.Random;
+
 
 public class Car {
 
     private final int RANDOM_NUMBER = (int)(Math.random()*9);
+    private final int BOUNDARY = 3;
     private String carName;
     private int moveCount;
     public Car(String carName)
     {
         this.carName = carName;
     }
-    public int moveCar(Car car,int RANDOM_NUMBER)
+    public int moveCar()
     {
-        car.moveCount++;
+        if(RANDOM_NUMBER>BOUNDARY)
+        {
+            moveCount++;
+        }
         return moveCount;
     }
 }

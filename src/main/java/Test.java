@@ -1,3 +1,4 @@
+import com.mentoring.mju.v1.racing.domain.Car;
 import com.mentoring.mju.v1.racing.view.InputView;
 import com.mentoring.mju.v1.racing.view.OutputView;
 
