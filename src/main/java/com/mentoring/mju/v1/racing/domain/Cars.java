@@ -1,7 +1,4 @@
 package com.mentoring.mju.v1.racing.domain;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Cars {
@@ -12,9 +9,6 @@ public class Cars {
         this.cars = cars;
     }
 
-    public List<Car> getCars()
-    {
-        return cars;
-    }
+
 
 }
