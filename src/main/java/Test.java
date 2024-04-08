@@ -7,11 +7,12 @@ public class Test {
     public static void main(String[] args) {
         OutputView outputView = new OutputView();
         InputView inputView = new InputView();
-
+        Car aa = new Car("aa");
         outputView.getCarNames();
         inputView.getCarNames();
         outputView.getChance();
         System.out.println(inputView.getChance());
+        System.out.println(aa.moveCar());
     }
 
 }
