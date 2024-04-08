@@ -9,6 +9,8 @@ public class Test {
 
         outputView.getCarNames();
         inputView.getCarNames();
+        outputView.getChance();
+        System.out.println(inputView.getChance());
     }
 
 }
