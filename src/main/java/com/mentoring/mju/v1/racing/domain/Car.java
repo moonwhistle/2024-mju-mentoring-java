@@ -20,4 +20,9 @@ public class Car {
         }
         return moveCount;
     }
+    public int getMoveCount()
+    {
+        return moveCount;
+    }
+
 }
