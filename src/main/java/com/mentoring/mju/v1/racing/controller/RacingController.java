@@ -3,6 +3,7 @@ package com.mentoring.mju.v1.racing.controller;
 import com.mentoring.mju.v1.racing.domain.Car;
 import com.mentoring.mju.v1.racing.domain.Cars;
 import com.mentoring.mju.v1.racing.view.InputView;
+import com.mentoring.mju.v1.racing.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +11,20 @@ import java.util.List;
 
 public class RacingController {
 
-        InputView inputView = new InputView();
-        Cars cars = new Cars(makeCars());
+        private final InputView inputView = new InputView();
+        private final OutputView outputView = new OutputView();
+
+        public void realRace()
+        {
+            outputView.carNames();
+            inputView.carNames();
+            Cars cars = new Cars(makeCars());
+            outputView.chance();
+            inputView.chance();
+            outputView.guide();
+            race(cars);
+
+        }
 
         public List<Car> makeCars()
         {
@@ -23,11 +36,13 @@ public class RacingController {
             }
             return carList;
         }
-        public void race()
+        public void race(Cars cars)
         {
+            List<Car> carList = cars.getCars();
+
             for(int i=0;i< inputView.getChance();i++)
             {
-                cars.moveCars();
+                outputView.moveCars(carList);
             }
         }
 

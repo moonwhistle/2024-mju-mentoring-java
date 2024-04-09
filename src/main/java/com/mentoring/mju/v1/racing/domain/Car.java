@@ -12,17 +12,21 @@ public class Car {
     {
         this.carName = carName;
     }
-    public int moveCar()
+    public void moveCar()
     {
         if(RANDOM_NUMBER>BOUNDARY)
         {
             moveCount++;
         }
-        return moveCount;
     }
     public int getMoveCount()
     {
         return moveCount;
     }
+    public String getCarName()
+    {
+        return carName;
+    }
+
 
 }

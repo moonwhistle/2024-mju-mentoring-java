@@ -7,17 +7,24 @@ public class InputView {
     private static final Scanner input = new Scanner(System.in);
     private List<String> carNames;
     private int Chance;
-    public List<String> getCarNames()
+    public void carNames()
     {
         String inputCarNames = input.nextLine();
         String[] carNamesArray = inputCarNames.split(",");
         carNames = Arrays.asList(carNamesArray);
+    }
+    public void chance()
+    {
+        Chance = input.nextInt();
+    }
+    public List<String> getCarNames()
+    {
         return carNames;
     }
     public int getChance()
     {
-        Chance = input.nextInt();
         return Chance;
     }
+
 
 }
