@@ -17,7 +17,7 @@ public class OutputView {
     {
         System.out.println("시도할 회수는 몇회인가요?");
     }
-    public void race(Car car)
+    public void showRace(Car car)
     {
         car.moveCar();
         System.out.println(car.getCarName()+": "+"-".repeat(car.getMoveCount()));
@@ -31,7 +31,7 @@ public class OutputView {
     {
         for(Car car: cars)
         {
-            race(car);
+            showRace(car);
         }
         System.out.print("\n");
     }
