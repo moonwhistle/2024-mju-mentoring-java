@@ -2,6 +2,7 @@ package com.mentoring.mju.v1.racing.view;
 
 
 import com.mentoring.mju.v1.racing.domain.Car;
+import com.mentoring.mju.v1.racing.domain.Cars;
 
 import java.util.List;
 
@@ -33,6 +34,12 @@ public class OutputView {
             race(car);
         }
         System.out.print("\n");
+    }
+
+    public void winners(List<String> winners)
+    {
+        String winner = String.join(",",winners);
+        System.out.println(winner+"가 최종우승했습니다.");
     }
 
 
