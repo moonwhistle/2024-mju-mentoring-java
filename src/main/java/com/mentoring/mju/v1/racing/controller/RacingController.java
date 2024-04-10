@@ -22,7 +22,7 @@ public class RacingController {
             outputView.chance();
             int chance = inputView.chance();
             outputView.guide();
-            race(cars,chance);
+            repeatRace(cars,chance);
             int maxCount = cars.selectMaxCount();
             List<String> winners = cars.selectWinners(maxCount);
             outputView.winners(winners);
@@ -38,13 +38,22 @@ public class RacingController {
             }
             return carList;
         }
-        public void race(Cars cars, int chance)
+        public void race(Cars cars)
         {
             List<Car> carList = cars.getCars();
-
-            for(int i=0;i< chance;i++)
+            for(Car car: carList)
             {
-                outputView.moveCars(carList);
+                car.moveCar();
+                outputView.showRace(car.getCarName(),car.getMoveCount());
+            }
+            outputView.newLine();
+        }
+
+        public void repeatRace(Cars cars,int chance)
+        {
+            for(int i=0;i<chance;i++)
+            {
+                race(cars);
             }
         }
 

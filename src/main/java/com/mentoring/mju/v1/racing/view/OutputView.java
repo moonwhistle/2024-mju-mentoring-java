@@ -15,29 +15,21 @@ public class OutputView {
     {
         System.out.println("시도할 회수는 몇회인가요?");
     }
-    public void showRace(Car car)
+    public void showRace(String carName, int moveCount)
     {
-        car.moveCar();
-        System.out.println(car.getCarName()+": "+"-".repeat(car.getMoveCount()));
+        System.out.println(carName+": "+"-".repeat(moveCount));
     }
     public void guide()
     {
         System.out.println("\n실행결과");
     }
-
-    public void moveCars(List<Car> cars)
-    {
-        for(Car car: cars)
-        {
-            showRace(car);
-        }
-        System.out.print("\n");
-    }
-
     public void winners(List<String> winners)
     {
         String winner = String.join(",",winners);
         System.out.println(winner+"가 최종우승했습니다.");
+    }
+    public void newLine(){
+        System.out.print("\n");
     }
 
 

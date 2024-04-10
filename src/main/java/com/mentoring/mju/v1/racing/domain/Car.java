@@ -2,17 +2,17 @@ package com.mentoring.mju.v1.racing.domain;
 
 public class Car {
 
-    private final int BOUNDARY = 3;
-    private String carName;
+    private static final int BOUNDARY = 3;
+    private final String carName;
     private int moveCount;
 
-    private int createRandomNumber()
-    {
-        return (int)(Math.random()*9);
-    }
     public Car(String carName)
     {
         this.carName = carName;
+    }
+    private int createRandomNumber()
+    {
+        return (int)(Math.random()*9);
     }
     public void moveCar()
     {
