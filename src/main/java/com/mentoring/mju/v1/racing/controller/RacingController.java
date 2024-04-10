@@ -23,9 +23,9 @@ public class RacingController {
             int chance = inputView.chance();
             outputView.guide();
             race(cars,chance);
-            cars.selectMaxCount();
-            cars.selectWinners();
-            outputView.winners(cars.getWinners());
+            int maxCount = cars.selectMaxCount();
+            List<String> winners = cars.selectWinners(maxCount);
+            outputView.winners(winners);
         }
 
         public List<Car> makeCars(List<String> carNames)

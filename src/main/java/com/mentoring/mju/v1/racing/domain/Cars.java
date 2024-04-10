@@ -6,15 +6,14 @@ import java.util.List;
 public class Cars {
 
     private final List<Car> cars;
-    private List<String> winners = new ArrayList<>();
-    private int maxCount=0;
 
     public Cars(final List<Car> cars) {
         this.cars = cars;
     }
 
-    public void selectMaxCount()
+    public int selectMaxCount()
     {
+        int maxCount = 0;
         for(Car car: cars)
         {
             if(car.getMoveCount()>=maxCount)
@@ -22,10 +21,12 @@ public class Cars {
                 maxCount = car.getMoveCount();
             }
         }
+        return maxCount;
     }
 
-    public void selectWinners()
+    public List<String> selectWinners(int maxCount)
     {
+        List<String> winners = new ArrayList<>();
         for(Car car: cars)
         {
             if(car.getMoveCount() == maxCount)
@@ -33,6 +34,7 @@ public class Cars {
                 winners.add(car.getCarName());
             }
         }
+        return winners;
     }
 
     public List<Car> getCars()
@@ -40,10 +42,6 @@ public class Cars {
         return cars;
     }
 
-    public List<String> getWinners()
-    {
-        return winners;
-    }
 
 
 }
