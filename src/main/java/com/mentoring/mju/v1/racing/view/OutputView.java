@@ -2,8 +2,6 @@ package com.mentoring.mju.v1.racing.view;
 
 
 import com.mentoring.mju.v1.racing.domain.Car;
-import com.mentoring.mju.v1.racing.domain.Cars;
-
 import java.util.List;
 
 public class OutputView {

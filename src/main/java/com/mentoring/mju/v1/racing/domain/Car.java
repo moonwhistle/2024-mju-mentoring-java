@@ -1,15 +1,12 @@
 package com.mentoring.mju.v1.racing.domain;
 
-
-import java.security.PublicKey;
-
 public class Car {
 
     private final int BOUNDARY = 3;
     private String carName;
     private int moveCount;
 
-    public int createRandomNumber()
+    private int createRandomNumber()
     {
         return (int)(Math.random()*9);
     }

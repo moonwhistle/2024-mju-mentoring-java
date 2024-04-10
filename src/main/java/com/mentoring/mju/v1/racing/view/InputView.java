@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class InputView {
     private static final Scanner input = new Scanner(System.in);
     private List<String> carNames;
-    private int Chance;
+    private int chance;
     public void carNames()
     {
         String inputCarNames = input.nextLine();
@@ -15,7 +15,7 @@ public class InputView {
     }
     public void chance()
     {
-        Chance = input.nextInt();
+        chance = input.nextInt();
     }
     public List<String> getCarNames()
     {
@@ -23,7 +23,7 @@ public class InputView {
     }
     public int getChance()
     {
-        return Chance;
+        return chance;
     }
 
 
