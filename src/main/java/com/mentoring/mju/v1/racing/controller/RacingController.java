@@ -17,32 +17,32 @@ public class RacingController {
         public void startRace()
         {
             outputView.carNames();
-            inputView.carNames();
-            Cars cars = new Cars(makeCars());
+            List<String> carNames = inputView.carNames();
+            Cars cars = new Cars(makeCars(carNames));
             outputView.chance();
-            inputView.chance();
+            int chance = inputView.chance();
             outputView.guide();
-            race(cars);
+            race(cars,chance);
             cars.selectMaxCount();
             cars.selectWinners();
             outputView.winners(cars.getWinners());
         }
 
-        public List<Car> makeCars()
+        public List<Car> makeCars(List<String> carNames)
         {
             List<Car> carList = new ArrayList<>();
-            for(String carName: inputView.getCarNames())
+            for(String carName: carNames)
             {
                 Car car = new Car(carName);
                 carList.add(car);
             }
             return carList;
         }
-        public void race(Cars cars)
+        public void race(Cars cars, int chance)
         {
             List<Car> carList = cars.getCars();
 
-            for(int i=0;i< inputView.getChance();i++)
+            for(int i=0;i< chance;i++)
             {
                 outputView.moveCars(carList);
             }
