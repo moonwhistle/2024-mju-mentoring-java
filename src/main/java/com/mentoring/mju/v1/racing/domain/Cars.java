@@ -11,8 +11,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    public int selectMaxCount()
-    {
+    public int selectMaxCount(){
         int maxCount = 0;
         for(Car car: cars)
         {
@@ -24,8 +23,7 @@ public class Cars {
         return maxCount;
     }
 
-    public List<String> selectWinners(int maxCount)
-    {
+    public List<String> selectWinners(int maxCount){
         List<String> winners = new ArrayList<>();
         for(Car car: cars)
         {
@@ -37,8 +35,7 @@ public class Cars {
         return winners;
     }
 
-    public List<Car> getCars()
-    {
+    public List<Car> getCars(){
         return cars;
     }
 

@@ -14,8 +14,7 @@ public class RacingController {
         private final InputView inputView = new InputView();
         private final OutputView outputView = new OutputView();
 
-        public void startRace()
-        {
+        public void startRace(){
             outputView.carNames();
             List<String> carNames = inputView.carNames();
             Cars cars = new Cars(makeCars(carNames));
@@ -28,8 +27,7 @@ public class RacingController {
             outputView.winners(winners);
         }
 
-        public List<Car> makeCars(List<String> carNames)
-        {
+        public List<Car> makeCars(List<String> carNames){
             List<Car> carList = new ArrayList<>();
             for(String carName: carNames)
             {
@@ -38,8 +36,7 @@ public class RacingController {
             }
             return carList;
         }
-        public void race(Cars cars)
-        {
+        public void race(Cars cars){
             List<Car> carList = cars.getCars();
             for(Car car: carList)
             {
@@ -49,8 +46,7 @@ public class RacingController {
             outputView.newLine();
         }
 
-        public void repeatRace(Cars cars,int chance)
-        {
+        public void repeatRace(Cars cars,int chance){
             for(int i=0;i<chance;i++)
             {
                 race(cars);

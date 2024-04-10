@@ -6,27 +6,23 @@ public class Car {
     private final String carName;
     private int moveCount;
 
-    public Car(String carName)
-    {
+    public Car(String carName){
         this.carName = carName;
     }
-    private int createRandomNumber()
-    {
+    private int createRandomNumber(){
         return (int)(Math.random()*9);
     }
-    public void moveCar()
-    {
+
+    public void moveCar(){
         if(createRandomNumber()>BOUNDARY)
         {
             moveCount++;
         }
     }
-    public int getMoveCount()
-    {
+    public int getMoveCount(){
         return moveCount;
     }
-    public String getCarName()
-    {
+    public String getCarName(){
         return carName;
     }
 
