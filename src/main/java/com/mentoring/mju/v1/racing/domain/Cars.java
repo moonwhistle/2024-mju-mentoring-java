@@ -13,10 +13,8 @@ public class Cars {
 
     public int selectMaxCount(){
         int maxCount = 0;
-        for(Car car: cars)
-        {
-            if(car.getMoveCount()>=maxCount)
-            {
+        for(Car car: cars){
+            if(car.getMoveCount()>=maxCount){
                 maxCount = car.getMoveCount();
             }
         }
@@ -25,10 +23,8 @@ public class Cars {
 
     public List<String> selectWinners(int maxCount){
         List<String> winners = new ArrayList<>();
-        for(Car car: cars)
-        {
-            if(car.getMoveCount() == maxCount)
-            {
+        for(Car car: cars){
+            if(car.getMoveCount() == maxCount){
                 winners.add(car.getCarName());
             }
         }

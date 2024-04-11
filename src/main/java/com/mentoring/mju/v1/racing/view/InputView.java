@@ -13,7 +13,8 @@ public class InputView {
         carNames = Arrays.asList(carNamesArray);
         return carNames;
     }
-    public int chance(){
+
+    public int getChance(){
         int chance;
         chance = input.nextInt();
         return chance;
