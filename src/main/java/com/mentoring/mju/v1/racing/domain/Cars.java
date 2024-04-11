@@ -31,8 +31,13 @@ public class Cars {
         return winners;
     }
 
+    public void addCar(Car car)
+    {
+        cars.add(car);
+    }
+
     public List<Car> getCars(){
-        return cars;
+        return new ArrayList<>(cars);
     }
 
 }

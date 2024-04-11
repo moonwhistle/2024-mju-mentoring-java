@@ -18,16 +18,17 @@ public class RacingController {
             outputView.carNames();
             List<String> carNames = inputView.carNames();
             Cars cars = new Cars(makeCars(carNames));
+            List<Car> carList = cars.getCars();
             outputView.chance();
             int chance = inputView.getChance();
             outputView.guide();
-            repeatRace(cars,chance);
+            repeatRace(carList,chance);
             int maxCount = cars.selectMaxCount();
             List<String> winners = cars.selectWinners(maxCount);
             outputView.winners(winners);
         }
 
-        public List<Car> makeCars(List<String> carNames){
+        private List<Car> makeCars(List<String> carNames){
             List<Car> carList = new ArrayList<>();
             for(String carName: carNames){
                 Car car = new Car(carName);
@@ -36,8 +37,7 @@ public class RacingController {
             return carList;
         }
 
-        public void startRace(Cars cars){
-            List<Car> carList = cars.getCars();
+        private void startRace(List<Car> carList){
             for(Car car: carList){
                 car.moveCar();
                 outputView.showRace(car.getCarName(),car.getMoveCount());
@@ -45,10 +45,10 @@ public class RacingController {
             outputView.newLine();
         }
 
-        public void repeatRace(Cars cars,int chance){
+        private void repeatRace(List<Car> carList,int chance){
             for(int i=0;i<chance;i++)
             {
-                startRace(cars);
+                startRace(carList);
             }
         }
 
