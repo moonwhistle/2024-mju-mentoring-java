@@ -2,6 +2,9 @@ package com.mentoring.mju.v1.racing.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.stream.Collectors;
 
 public class Cars {
 
@@ -12,28 +15,17 @@ public class Cars {
     }
 
     public int selectMaxCount(){
-        int maxCount = 0;
-        for(Car car: cars){
-            if(car.getMoveCount()>=maxCount){
-                maxCount = car.getMoveCount();
-            }
-        }
-        return maxCount;
+        return cars.stream()
+                .mapToInt(Car::getMoveCount)
+                .max()
+                .orElse(0);
     }
 
     public List<String> selectWinners(int maxCount){
-        List<String> winners = new ArrayList<>();
-        for(Car car: cars){
-            if(car.getMoveCount() == maxCount){
-                winners.add(car.getCarName());
-            }
-        }
-        return winners;
-    }
-
-    public void addCar(Car car)
-    {
-        cars.add(car);
+        return cars.stream()
+                .filter(winner -> winner.getMoveCount() == maxCount)
+                .map(Car::getCarName)
+                .collect(Collectors.toList());
     }
 
     public List<Car> getCars(){

@@ -46,8 +46,7 @@ public class RacingController {
         }
 
         private void repeatRace(List<Car> carList,int chance){
-            for(int i=0;i<chance;i++)
-            {
+            for(int i=0;i<chance;i++) {
                 startRace(carList);
             }
         }

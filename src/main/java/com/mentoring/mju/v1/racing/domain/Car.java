@@ -16,8 +16,7 @@ public class Car {
     }
 
     public void moveCar(){
-        if(createRandomNumber()>BOUNDARY)
-        {
+        if(createRandomNumber()>BOUNDARY) {
             moveCount++;
         }
     }
