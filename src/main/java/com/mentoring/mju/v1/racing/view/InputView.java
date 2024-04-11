@@ -20,7 +20,4 @@ public class InputView {
         return chance;
     }
 
-
-
-
 }

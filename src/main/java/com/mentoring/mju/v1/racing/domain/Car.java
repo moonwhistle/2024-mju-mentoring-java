@@ -25,10 +25,9 @@ public class Car {
     public int getMoveCount(){
         return moveCount;
     }
-    
+
     public String getCarName(){
         return carName;
     }
-
 
 }

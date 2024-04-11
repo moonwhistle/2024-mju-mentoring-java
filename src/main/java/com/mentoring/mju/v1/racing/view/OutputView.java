@@ -30,5 +30,4 @@ public class OutputView {
         System.out.print("\n");
     }
 
-
 }
