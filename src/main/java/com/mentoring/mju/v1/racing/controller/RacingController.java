@@ -36,7 +36,7 @@ public class RacingController {
             return carList;
         }
 
-        public void race(Cars cars){
+        public void startRace(Cars cars){
             List<Car> carList = cars.getCars();
             for(Car car: carList){
                 car.moveCar();
@@ -48,7 +48,7 @@ public class RacingController {
         public void repeatRace(Cars cars,int chance){
             for(int i=0;i<chance;i++)
             {
-                race(cars);
+                startRace(cars);
             }
         }
 
