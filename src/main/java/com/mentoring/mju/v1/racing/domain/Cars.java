@@ -2,8 +2,6 @@ package com.mentoring.mju.v1.racing.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
 public class Cars {
@@ -30,6 +28,15 @@ public class Cars {
 
     public List<Car> getCars(){
         return new ArrayList<>(cars);
+    }
+
+    public static Cars makeCars(List<String> carNames){
+        List<Car> carList = new ArrayList<>();
+        for(String carName: carNames){
+            Car car = new Car(carName);
+            carList.add(car);
+        }
+        return new Cars(carList);
     }
 
 }

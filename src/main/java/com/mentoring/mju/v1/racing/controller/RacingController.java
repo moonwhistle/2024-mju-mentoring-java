@@ -4,10 +4,7 @@ import com.mentoring.mju.v1.racing.domain.Car;
 import com.mentoring.mju.v1.racing.domain.Cars;
 import com.mentoring.mju.v1.racing.view.InputView;
 import com.mentoring.mju.v1.racing.view.OutputView;
-
-import java.util.ArrayList;
 import java.util.List;
-
 
 public class RacingController {
 
@@ -17,7 +14,7 @@ public class RacingController {
         public void startRace(){
             outputView.carNames();
             List<String> carNames = inputView.carNames();
-            Cars cars = new Cars(makeCars(carNames));
+            Cars cars = Cars.makeCars(carNames);
             List<Car> carList = cars.getCars();
             outputView.chance();
             int chance = inputView.getChance();
@@ -26,15 +23,6 @@ public class RacingController {
             int maxCount = cars.selectMaxCount();
             List<String> winners = cars.selectWinners(maxCount);
             outputView.winners(winners);
-        }
-
-        private List<Car> makeCars(List<String> carNames){
-            List<Car> carList = new ArrayList<>();
-            for(String carName: carNames){
-                Car car = new Car(carName);
-                carList.add(car);
-            }
-            return carList;
         }
 
         private void startRace(List<Car> carList){
